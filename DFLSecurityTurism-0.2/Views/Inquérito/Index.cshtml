@@ -1,0 +1,80 @@
+﻿@model IEnumerable<DFLSecurityTurism_0._2.Models.Inquérito>
+
+@{
+    ViewData["Title"] = "Inquérito";
+}
+<div class="text-center">
+    <h1 class="text-info">
+        Ajude-nos a melhorar a nossa plataforma, atualizando as
+        informações acerca das medidas de segurança
+        e higiene, no seu estabelecimento.
+    </h1>
+</div>
+
+<img src="~/image/image4.png" height="250" width="1050" />
+
+<h1>Inquérito:</h1>
+<p>
+    <a asp-action="Create">Responder inquérito</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipodeestabelecimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantoscertificadosdesegurançatem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quaissão)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QueMecanismosdesegurançaoestabelecimentoutiliza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantosequipamentosdesegurançaoestabelecimentoutiliza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quaissãoo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipodeestabelecimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantoscertificadosdesegurançatem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quaissão)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QueMecanismosdesegurançaoestabelecimentoutiliza)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantosequipamentosdesegurançaoestabelecimentoutiliza)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quaissãoo)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

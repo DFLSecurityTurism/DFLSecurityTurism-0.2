@@ -1,0 +1,63 @@
+﻿@model DFLSecurityTurism_0._2.Models.Inquérito
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Inquérito</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Tipodeestabelecimento" class="control-label"></label>
+                <input asp-for="Tipodeestabelecimento" class="form-control" />
+                <span asp-validation-for="Tipodeestabelecimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantoscertificadosdesegurançatem" class="control-label"></label>
+                <input asp-for="Quantoscertificadosdesegurançatem" class="form-control" />
+                <span asp-validation-for="Quantoscertificadosdesegurançatem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quaissão" class="control-label"></label>
+                <input asp-for="Quaissão" class="form-control" />
+                <span asp-validation-for="Quaissão" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QueMecanismosdesegurançaoestabelecimentoutiliza" class="control-label"></label>
+                <input asp-for="QueMecanismosdesegurançaoestabelecimentoutiliza" class="form-control" />
+                <span asp-validation-for="QueMecanismosdesegurançaoestabelecimentoutiliza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantosequipamentosdesegurançaoestabelecimentoutiliza" class="control-label"></label>
+                <input asp-for="Quantosequipamentosdesegurançaoestabelecimentoutiliza" class="form-control" />
+                <span asp-validation-for="Quantosequipamentosdesegurançaoestabelecimentoutiliza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quaissãoo" class="control-label"></label>
+                <input asp-for="Quaissãoo" class="form-control" />
+                <span asp-validation-for="Quaissãoo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
