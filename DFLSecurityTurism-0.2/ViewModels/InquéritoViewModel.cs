@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace DFLSecurityTurism_0._2.Models
+namespace DFLSecurityTurism_0._2.ViewModels
 {
-    public class Inquérito
+    public class InquéritoViewModel
     {
-        [Key]
-        public int Id { get; set; }
-
-
         [Required(ErrorMessage = "Por favor, insira o tipo de estabelecimento.")]
         [Display(Name = "Tipo de estabelecimento?")]
         public string TipoDeEstabelecimento { get; set; }
@@ -19,7 +12,7 @@ namespace DFLSecurityTurism_0._2.Models
 
         [Required(ErrorMessage = "Por favor, insira o nome do estabelecimento.")]
         [Display(Name = "Nome?")]
-        [StringLength(100)]
+
         public string Nome { get; set; }
 
 
@@ -41,16 +34,11 @@ namespace DFLSecurityTurism_0._2.Models
         public int QuantosEquipamentosDeSegurançaOEstabelecimentoUtiliza { get; set; }
 
         [Required(ErrorMessage = "Por favor, diga quais são os equipamentos de segurança que tem.")]
-
         [Display(Name = "Quais são os equipamentos de segurança que tem?")]
         public string QuaisSãoOsEquipamentosDeSegurançaQueTem { get; set; }
 
         [Required(ErrorMessage = " Por favor, escolha uma imagem para ser exibida no website.")]
-        public string Imagem { get; set; }
-
-        public Inquérito()
-        {
-
-        }
+        [Display(Name = "Imagem:")]
+        public IFormFile Imagem { get; set; }
     }
 }

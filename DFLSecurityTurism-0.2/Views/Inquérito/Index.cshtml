@@ -1,79 +1,44 @@
 ﻿@model IEnumerable<DFLSecurityTurism_0._2.Models.Inquérito>
 
 @{
-    ViewData["Title"] = "Inquérito";
+    ViewData["Title"] = "Index";
 }
-<div class="text-center">
-    <h1 class="text-info">
-        Ajude-nos a melhorar a nossa plataforma, atualizando as
-        informações acerca das medidas de segurança
-        e higiene, no seu estabelecimento.
-    </h1>
-</div>
 
-<img src="~/image/image4.png" height="250" width="1050" />
+<h4 class="text-center text-uppercase">Inquérito</h4>
 
-<h1>Inquérito:</h1>
 <p>
-    <a asp-action="Create">Responder inquérito</a>
+    <a asp-action="New" class="btn btn-sm btn-primary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i> Responder inquérito</a>
 </p>
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Tipodeestabelecimento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantoscertificadosdesegurançatem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quaissão)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.QueMecanismosdesegurançaoestabelecimentoutiliza)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quantosequipamentosdesegurançaoestabelecimentoutiliza)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quaissãoo)
-            </th>
-            <th></th>
+            <th>@Html.DisplayNameFor(model => model.TipoDeEstabelecimento)</th>
+            <th>@Html.DisplayNameFor(model => model.Nome)</th>
+            <th>@Html.DisplayNameFor(model => model.QuantosCertificadosDeSegurançaTem)</th>
+            <th>@Html.DisplayNameFor(model => model.QuaisSão)</th>
+            <th>@Html.DisplayNameFor(model => model.QueMecanismosDeSegurançaOEstabelecimentoUtiliza)</th>
+            <th>@Html.DisplayNameFor(model => model.QuantosEquipamentosDeSegurançaOEstabelecimentoUtiliza)</th>
+            <th>@Html.DisplayNameFor(model => model.QuaisSãoOsEquipamentosDeSegurançaQueTem)</th>
+
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var inquérito in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Tipodeestabelecimento)
+                    <img src="~/images/@inquérito.Imagem"
+                         class="rounded-circle"
+                         height="40" width="40"
+                         asp-append-version="true" />
+                    @inquérito.TipoDeEstabelecimento
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantoscertificadosdesegurançatem)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quaissão)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.QueMecanismosdesegurançaoestabelecimentoutiliza)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quantosequipamentosdesegurançaoestabelecimentoutiliza)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Quaissãoo)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
+                <td>@inquérito.Nome</td>
+                <td>@inquérito.QuantosCertificadosDeSegurançaTem</td>
+                <td>@inquérito.QuaisSão</td>
+                <td>@inquérito.QueMecanismosDeSegurançaOEstabelecimentoUtiliza</td>
+                <td>@inquérito.QuantosEquipamentosDeSegurançaOEstabelecimentoUtiliza</td>
+                <td>@inquérito.QuaisSãoOsEquipamentosDeSegurançaQueTem</td>
             </tr>
         }
     </tbody>
