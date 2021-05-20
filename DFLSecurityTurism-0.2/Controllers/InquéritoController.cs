@@ -67,7 +67,7 @@ namespace DFLSecurityTurism_0._2.Controllers
 
             if (model.Imagem != null)
             {
-                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "imagensEstabelecimentos");
+                string uploadsFolder = Path.Combine(webHostEnvironment.WebRootPath, "images");
                 uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Imagem.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))

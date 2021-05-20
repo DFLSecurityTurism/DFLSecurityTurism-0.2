@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\imagensEstabelecimentos\**" />
+    <Content Remove="wwwroot\imagensEstabelecimentos\**" />
+    <EmbeddedResource Remove="wwwroot\imagensEstabelecimentos\**" />
+    <None Remove="wwwroot\imagensEstabelecimentos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="3.1.15" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.15" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.14" />
@@ -21,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\imagensEstabelecimentos\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>
