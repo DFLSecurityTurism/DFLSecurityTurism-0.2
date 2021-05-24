@@ -1,53 +1,26 @@
-﻿@model IEnumerable<DFLSecurityTurism_0._2.Models.Restaurante>
+﻿@model List<DFLSecurityTurism_0._2.Models.Restaurante>
 
 @{
     ViewData["Title"] = "Index";
 }
-<div class="text-md-center">
+<div class="text-center">
     <h1 class="text-uppercase">
         Restaurantes
     </h1>
 </div>
 
-<h1>Index</h1>
+<div class="row">
+    <div class="col-md-4">
+        <h1>Solar do bacalhau</h1>
+        <img src="~/images/Imagem4.jpg" alt="" style=" width:300px; height:350px"/>
+        <p>Descrição:</p>
+    </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descrição)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Imagem)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descrição)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Imagem)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+  
+
+        </div>
+        <div style="text-align:center">
+            <a class="btn btn-primary">Carregar Mais</a>
+            </div>
+
+              
