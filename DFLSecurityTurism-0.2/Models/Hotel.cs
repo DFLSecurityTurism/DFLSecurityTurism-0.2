@@ -19,7 +19,7 @@ namespace DFLSecurityTurism_0._2.Models
 
         public Hotel()
         {
-
+            
         }
     }
 }
