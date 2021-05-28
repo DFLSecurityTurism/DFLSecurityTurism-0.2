@@ -16,5 +16,7 @@ namespace DFLSecurityTurism_0._2.Data
         public DbSet<DFLSecurityTurism_0._2.Models.Inquérito> Inquérito { get; set; }
         public DbSet<DFLSecurityTurism_0._2.Models.Restaurante> Restaurante { get; set; }
         public DbSet<DFLSecurityTurism_0._2.Models.Hotel> Hotel { get; set; }
+        public DbSet<DFLSecurityTurism_0._2.Models.AvaliacaoHotel> AvaliacaoHotel { get; set; }
+        public DbSet<DFLSecurityTurism_0._2.Models.AvaliacaoRestaurante> AvaliacaoRestaurante { get; set; }
     }
 }

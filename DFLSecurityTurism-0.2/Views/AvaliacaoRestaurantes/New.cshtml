@@ -1,0 +1,152 @@
+﻿@model DFLSecurityTurism_0._2.ViewModels.AvaliacaoRestauranteViewModel
+
+@{
+    ViewData["Title"] = "New";
+}
+
+<div class="col-md-10 mx-auto py-4">
+    <div class="card">
+        <div class="card-header bg-primary text-uppercase text-white">
+            <h4>Avaliar Hóteis </h4>
+        </div>
+        <div class="card-body">
+            <form enctype="multipart/form-data" asp-action="New">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Restaurante" class="control-label"></label>
+                            <select asp-for="Restaurante" class="form-control">
+                                <option value="">Selecione o restaurante </option>
+                                <option value="Solar do bacalhau">Solar do bacalhau</option>
+                            </select>
+                            <span asp-validation-for="Restaurante" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Classifique" class="control-label"></label>
+                            <select asp-for="Classifique" class="form-control">
+                                <option value="">Classifique de 0 a 10</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <span asp-validation-for="Classifique" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Equipamentos" class="control-label"></label>
+                                    <select asp-for="Equipamentos" class="form-control">
+                                        <option value="">Classifique de 0 a 10</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <span asp-validation-for="Equipamentos" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Período" class="control-label"></label>
+                                    <select asp-for="Período" class="form-control">
+                                        <option value="">Classifique de 0 a 10</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <span asp-validation-for="Período" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Procedimentos" class="control-label"></label>
+                                        <select asp-for="Procedimentos" class="form-control">
+                                            <option value="">Classifique de 0 a 10</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <span asp-validation-for="Procedimentos" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Recomendação" class="control-label"></label>
+                                        <select asp-for="Recomendação" class="form-control">
+                                            <option value="">Classifique</option>
+                                            <option value="Muito mau">Muito mau</option>
+                                            <option value="Mau">Mau</option>
+                                            <option value="Bom">Bom</option>
+                                            <option value="Muito bom">Muito bom</option>
+                                            <option value="Excelente">Excelente</option>
+                                        </select>
+                                        <span asp-validation-for="Recomendação" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Comentário" class="control-label"></label>
+                                        <input asp-for="Comentário" class="form-control" />
+                                        <span asp-validation-for="Comentário" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="submit" class="btn btn-sm btn-primary rounded-0 text-uppercase" />
+                                <a asp-action="Index" class="btn btn-sm btn-primary rounded-0 text-uppercase"><i class="fas fa-fast-backward"></i>Voltar</a>
+                            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}

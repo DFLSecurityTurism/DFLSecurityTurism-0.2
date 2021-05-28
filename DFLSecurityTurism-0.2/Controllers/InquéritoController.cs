@@ -23,8 +23,8 @@ namespace DFLSecurityTurism_0._2.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var employee = await dbContext.Inquérito.ToListAsync();
-            return View(employee);
+            var inquérito = await dbContext.Inquérito.ToListAsync();
+            return View(inquérito);
         }
 
         [Authorize]

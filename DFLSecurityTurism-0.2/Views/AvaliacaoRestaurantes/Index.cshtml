@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DFLSecurityTurism_0._2.Models.AvaliacaoRestaurante>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="text-uppercase">
+        Avaliar Restaurantes
+    </h1>
+</div>
+
+<h4 class="text-center text-info">
+    Avalie um dos restaurantes que visitou.
+</h4>
+
+<p>
+    <a asp-action="New" class="btn btn-sm btn-primary rounded-0 text-uppercase"><i class="fas fa-plus-circle"></i>Avaliar</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Restaurante)</th>
+            <th>@Html.DisplayNameFor(model => model.Classifique)</th>
+            <th>@Html.DisplayNameFor(model => model.Equipamentos)</th>
+            <th>@Html.DisplayNameFor(model => model.Período)</th>
+            <th>@Html.DisplayNameFor(model => model.Procedimentos)</th>
+            <th>@Html.DisplayNameFor(model => model.Recomendação)</th>
+            <th>@Html.DisplayNameFor(model => model.Comentário)</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var AvaliacaoHotel in Model)
+        {
+            <tr>
+                <td>
+                    @AvaliacaoHotel.Restaurante
+                    @AvaliacaoHotel.Classifique
+                </td>
+                <td>@AvaliacaoHotel.Equipamentos</td>
+                <td>@AvaliacaoHotel.Período</td>
+                <td>@AvaliacaoHotel.Procedimentos</td>
+                <td>@AvaliacaoHotel.Recomendação</td>
+                <td>@AvaliacaoHotel.Comentário</td>
+            </tr>
+        }
+    </tbody>
+</table>
