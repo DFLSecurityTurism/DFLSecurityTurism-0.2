@@ -23,7 +23,7 @@ namespace DFLSecurityTurism_0._2.Controllers
         {
 
             new Restaurante(){Nome="Solar do bacalhau", Imagem="Imagem1.jpg", Descrição1="Descrição:Tem de se criar um", Descrição2="texto para descrever", Descrição3="as informações", Descrição4="sobre o covid-19"},
-            new Restaurante(){Nome="Restaurante italia", Imagem="Imagem2.jpg", Descrição1="Covid"},
+            new Restaurante(){Nome="Restaurante Italia", Imagem="Imagem2.jpg", Descrição1="Covid"},
             new Restaurante(){Nome="Restaurante Notes Bar & Kitchen", Imagem="Imagem3.png", Descrição1="Covid"},
             new Restaurante(){Nome="Restaurante Café Atenas", Imagem="Imagem4.jpg", Descrição1="Covid"}
 
