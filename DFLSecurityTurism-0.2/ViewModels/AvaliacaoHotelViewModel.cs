@@ -28,7 +28,7 @@ namespace DFLSecurityTurism_0._2.ViewModels
         public string Procedimentos { get; set; }
 
         [Required(ErrorMessage = "Por favor, insira a classificação.")]
-        [Display(Name = "Se tivesse que recomendar o estabelecimento a um amigo/familiar/conhecido, que classificação daria de 0 a 10?")]
+        [Display(Name = "Se tivesse que recomendar o estabelecimento a um amigo/familiar/conhecido, que classificação daria?")]
         public string Recomendação { get; set; }
 
         [Display(Name = "Comentário:")]
