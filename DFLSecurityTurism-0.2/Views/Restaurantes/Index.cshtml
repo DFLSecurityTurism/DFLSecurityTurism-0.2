@@ -16,14 +16,15 @@
 
             foreach (var restaurante in Model)
             {
-                <div class="col-md-6">
-                    <h1>@restaurante.Nome </h1>
-                    <img src="~/imagensR/@restaurante.Imagem" alt="" style=" width:500px; height:350px" />
-                    <p>@restaurante.Descrição1 </p>
-                    <p>@restaurante.Descrição2 </p>
-                    <p>@restaurante.Descrição3 </p>
-                    <p>@restaurante.Descrição4 </p>
-                </div>
+        <div class="col-md-6">
+            <h1>@restaurante.Nome </h1>
+            <img src="~/imagensR/@restaurante.Imagem" alt="" style=" width:500px; height:350px" />
+            <p>@restaurante.Descrição1 </p>
+            <p>@restaurante.Descrição2 </p>
+            <p>@restaurante.Descrição3 </p>
+            <p>@restaurante.Descrição4 </p>
+            <p>@restaurante.Descrição5 </p>
+        </div>
             }
         }
         else

@@ -18,6 +18,7 @@ namespace DFLSecurityTurism_0._2.Models
         public string Descrição3 { get; set; }
         public string Descrição4 { get; set; }
 
+        public string Descrição5 { get; set; }
         public string Imagem { get; set; }
 
         public Restaurante()
